@@ -12,6 +12,10 @@ function search(){
     success(response){
       //console.log(URL);
       //console.log(response);
+      
+      //clear
+      document.getElementById("results").innerHTML='';
+
       for(let i = 0; i<response[3].length; i++){
         // // bad way , resort back to this if append child is not possible yet
         // document.getElementById('results').innerHTML += '<div><a target="_blank"href='+ response[3][i]+'>'+response[3][i]+'</a></div>';
@@ -19,7 +23,7 @@ function search(){
         //create div element in dom
         let newDiv = document.createElement("div");
         //assign html inside of it
-        newDiv.innerHTML = '<div><a target="_blank"href='+ response[3][i]+'>'+response[3][i]+'</a></div>';
+        newDiv.innerHTML = '<h4>'+ response[1][i] +'</h4><a target="_blank"href='+ response[3][i]+'>'+response[2][i]+'</a>';
         //append div element somewhere
         document.getElementById("results").appendChild(newDiv);
 

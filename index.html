@@ -7,11 +7,11 @@
   <title>Wikipedia Viewer</title>
   <!-- first load bootstrap css -->
   <link rel="stylesheet" href="bootstrap.min.css">
-  <!-- then load your css or type here if short-->
+  <!-- then load your css or type here -->
   <style>
     html{ font-size: 16px; }
     body {
-      background-color: #eee;
+      background-color: #333;
     }
     #searchField {
       margin: 1rem;
@@ -23,7 +23,14 @@
       margin: 1rem;
     }
     #results{
-      background-color: #ddd
+      margin-top: 1rem;
+      background-color: #fff;
+    }
+    #results div{
+      margin-bottom: 1.5rem;
+    }
+    .jumbotron{
+      padding: 2.5rem 2rem;
     }
   </style>
 </head>
@@ -35,13 +42,13 @@
     </div>
 
     <div class="row justify-content-center">
-      <input id='searchField' placeholder="type here..">
+      <input id='searchField' class="form-control col-md-4" placeholder="type here..">
       <button id="searchBtn" class="btn btn-success" onclick="search()">Search</button>
     </div>
 
     <div class="row justify-content-center">
-      <div id='results' class="col-md-10">
-        <!-- results will be in here from innerHTML -->
+      <div id='results' class="col-md-10 jumbotron">
+        <!-- results will be displayed here -->
       </div>
     </div>
 
