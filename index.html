@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wikipedia Viewer</title>
+  <!-- first load bootstrap css -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <!-- then load your css or type here -->
+  <style>
+    html{ font-size: 16px; }
+    body {
+      background-color: #222;
+    }
+    #searchField {
+      margin: 1rem;
+    }
+    button a{
+      color:#fff;
+    }
+    #topBtn{
+      margin: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="mainContain" class="container-fluid">
+    <div class="row justify-content-center">
+      <a id="topBtn" class="btn btn-primary" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">random wikipedia article</a>
+    </div>
+
+    <div class="row justify-content-center">
+      <input id='searchField' placeholder="type here..">
+      <button id="searchBtn" class="btn btn-success" onclick="search()">Search</button>
+    </div>
+
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+
+</body>
+</html>
