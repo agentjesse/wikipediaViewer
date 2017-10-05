@@ -1,4 +1,4 @@
-//avoid jQuery
+//n.t.s. avoid jQuery if possible
 function search(){
   //assign the searchField value to somewhere
   let searchValue = document.getElementById('searchField').value;
@@ -8,10 +8,16 @@ function search(){
   $.ajax({
     url: URL,
     type: 'GET',
-    //... random solution, change dataType to jsonp instead of json....fuck
     dataType: 'jsonp',
     success(response){
+      console.log(URL);
       console.log(response);
+      for(let i = 0; i<response[3].length; i++){
+        // bad way?
+        document.getElementById('results').innerHTML += '<div><a target="_blank"href='+ response[3][i]+'>'+response[3][i]+'</a></div>';
+
+      }
+
     },
     error(jqXHR,status,errorThrown){
       console.log( jqXHR );
