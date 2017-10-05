@@ -12,9 +12,11 @@ function search(){
     success(response){
       //console.log(URL);
       //console.log(response);
-      
+
       //clear
-      document.getElementById("results").innerHTML='';
+      //document.getElementById("results").innerHTML='';
+      //select an element by css selector like id or class
+      document.querySelector('#results').innerHTML='';
 
       for(let i = 0; i<response[3].length; i++){
         // // bad way , resort back to this if append child is not possible yet
